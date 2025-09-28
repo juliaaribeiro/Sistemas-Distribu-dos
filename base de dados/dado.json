@@ -1,0 +1,104 @@
+[
+  {
+    "pergunta": "Faixa de preço das consultorias",
+    "resposta": "Variam muito, depende da área do projeto, e geralmente fazemos uma reunião só pra apresentar a proposta. Não gostamos de falar o preço por mensagem ou antes dessa reunião.",
+    "categoria": "preço",
+    "sinonimos": ["Quanto custa a consultoria?", "Qual o valor do serviço?", "Preço dos projetos"]
+  },
+  {
+    "pergunta": "Como elas funcionam?",
+    "resposta": "Depende da área. Temos projetos de consultoria financeira, em recursos humanos, estratégica e em marketing e vendas. O funcionamento geral envolve um Gerente de Projetos capacitado na área, que ficará responsável pelo projeto com sua equipe de 2 ou 3 consultores, além do professor orientador, geralmente doutor do DAE, que nos guia durante todo o processo.",
+    "categoria": "funcionamento",
+    "sinonimos": ["Como funciona a consultoria?", "Qual o processo da consultoria?", "Etapas da consultoria"]
+  },
+  {
+    "pergunta": "Será que eu preciso de uma consultoria?",
+    "resposta": "Normalmente toda empresa precisa de uma consultoria, pois não existe empresa perfeita; sempre haverá um desafio a ser superado. A menos que a empresa tenha um consultor próprio ou um setor de melhoria contínua, sempre conseguimos melhorar algo. Nenhuma empresa funciona apenas no “feeling”, é importante ter um planejamento bem estruturado em todas as áreas.",
+    "categoria": "necessidade",
+    "sinonimos": ["Preciso de consultoria?", "Minha empresa precisa de ajuda?", "Quando contratar consultoria?"]
+  },
+  {
+    "pergunta": "O que é uma consultoria?",
+    "resposta": "Consultoria administrativa é um serviço profissional que ajuda empresas ou empreendedores a melhorar gestão e desempenho. Inclui:\n- Diagnóstico: identificar problemas ou desafios.\n- Planejamento: propor soluções estratégicas.\n- Implementação: apoiar execução das mudanças.\n- Acompanhamento: medir resultados e ajustar o que for necessário.\nPrincipais áreas: gestão financeira, gestão de pessoas, marketing e vendas, estratégico.\nResumo: é como uma 'lente externa' que identifica problemas e traz ferramentas de gestão.",
+    "categoria": "definição",
+    "sinonimos": ["O que é consultoria?", "Definição de consultoria", "Serviço de consultoria"]
+  },
+  {
+    "pergunta": "Como a UFLA Jr pode ajudar meu negócio?",
+    "resposta": "Fazemos um diagnóstico para identificar a área que mais necessita de atenção, analisamos o contexto e dados da empresa e elaboramos um plano de ação para melhorar a performance.",
+    "categoria": "benefício",
+    "sinonimos": ["Como a UFLA Jr ajuda?", "Como meu negócio pode se beneficiar?", "Qual a ajuda da UFLA Jr"]
+  },
+  {
+    "pergunta": "Conceitos básicos de administração para pequenos negócios e grandes",
+    "resposta": "Conceitos básicos:\n- Planejamento: definir metas e como alcançá-las.\n- Organização: distribuir recursos (pessoas, dinheiro, tempo).\n- Direção: liderar e motivar a equipe.\n- Controle: acompanhar resultados e corrigir falhas.\nDiferenças na aplicação:\n- Pequenos negócios → gestão simples, flexível, centralizada no dono.\n- Grandes empresas → gestão estruturada, com hierarquia, departamentos e sistemas formais.\nResumo: conceitos são os mesmos, mas escala e forma de aplicação mudam conforme o tamanho da empresa.",
+    "categoria": "educacional",
+    "sinonimos": ["Conceitos de administração", "Administração para empresas", "Gestão básica para negócios"]
+  },
+  {
+    "pergunta": "Quanto tempo dura a consultoria?",
+    "resposta": "Depende do projeto, mas geralmente vai de 30 a 75 dias úteis. Alguns projetos podem chegar a 100 dias.",
+    "categoria": "duração",
+    "sinonimos": ["Tempo de consultoria", "Quanto tempo leva o projeto?", "Duração do serviço"]
+  },
+  {
+    "pergunta": "Teria outros serviços além de consultoria?",
+    "resposta": "Sim, realizamos pesquisa de mercado, somos referência inclusive, e um dos nossos projetos mais vendidos se enquadra nessa categoria.",
+    "categoria": "serviços",
+    "sinonimos": ["Oferecem outros serviços?", "Mais serviços além da consultoria?", "Serviços adicionais"]
+  },
+  {
+    "pergunta": "Teria um portfólio dos projetos realizados?",
+    "resposta": "Sim, se quiserem posso enviar o portfólio completo dos projetos realizados.",
+    "categoria": "portfólio",
+    "sinonimos": ["Mostrar projetos realizados", "Portfólio de consultorias", "Exemplos de trabalhos"]
+  },
+  {
+    "pergunta": "Como contrato um serviço da UFLA Júnior?",
+    "resposta": "Marcamos uma reunião diagnóstica para entender a empresa, seus desafios e expectativas do gestor. Depois analisamos qual projeto se adequa melhor à realidade da empresa e agendamos uma reunião de proposta, mostrando não só o valor monetário, mas também como o projeto irá agregar na empresa e como ele funcionará.",
+    "categoria": "contratação",
+    "sinonimos": ["Como contratar a UFLA Jr?", "Quero contratar consultoria", "Processo de contratação"]
+  },
+  {
+    "pergunta": "O atendimento/consultoria é presencial ou remoto?",
+    "resposta": "Em Lavras e cidades próximas podemos fazer reuniões presenciais, mas em outras regiões o atendimento é totalmente remoto. Geralmente o processo não envolve muito o gestor diretamente, conseguimos fazer boa parte do trabalho fora da empresa dele.",
+    "categoria": "modalidade",
+    "sinonimos": ["Consultoria presencial ou online?", "Como é o atendimento?", "Reuniões presenciais ou remotas?"]
+  },
+  {
+    "pergunta": "Quais são as etapas de um projeto de consultoria?",
+    "resposta": "O projeto geralmente segue as etapas: reunião diagnóstica, análise da empresa, elaboração do plano de ação, implementação das soluções, acompanhamento dos resultados e ajustes finais.",
+    "categoria": "processo",
+    "sinonimos": ["Etapas da consultoria", "Fases do projeto", "Como é feito o projeto"]
+  },
+  {
+    "pergunta": "Quem participa da consultoria além do gerente de projetos?",
+    "resposta": "Além do gerente de projetos, participam consultores especializados (geralmente 2 a 3) e o professor orientador do DAE, que supervisiona e guia o projeto.",
+    "categoria": "equipe",
+    "sinonimos": ["Quem faz parte da equipe?", "Participantes da consultoria", "Equipe envolvida"]
+  },
+  {
+    "pergunta": "Quais áreas a UFLA Jr atua?",
+    "resposta": "Atuamos em consultoria financeira, recursos humanos, estratégia, marketing e vendas, e também realizamos pesquisas de mercado.",
+    "categoria": "áreas",
+    "sinonimos": ["Em que áreas trabalham?", "Áreas de atuação", "Especialidades da consultoria"]
+  },
+  {
+    "pergunta": "Quais resultados posso esperar da consultoria?",
+    "resposta": "Resultados incluem melhoria de processos, aumento de eficiência, planejamento estratégico estruturado, e melhores resultados financeiros e organizacionais.",
+    "categoria": "benefício",
+    "sinonimos": ["O que vou ganhar com a consultoria?", "Resultados esperados", "Benefícios da consultoria"]
+  },
+  {
+    "pergunta": "Como agendar uma reunião diagnóstica?",
+    "resposta": "Você pode entrar em contato conosco pelo nosso canal oficial de comunicação para marcar uma reunião diagnóstica presencial ou online, conforme a localização.",
+    "categoria": "agendamento",
+    "sinonimos": ["Como marcar reunião?", "Agendar diagnóstico", "Marcar reunião inicial"]
+  },
+  {
+    "pergunta": "Existe algum valor mínimo ou máximo para os projetos?",
+    "resposta": "Não há um valor fixo, pois cada projeto é personalizado. O preço varia conforme a área, complexidade e escopo do projeto.",
+    "categoria": "preço",
+    "sinonimos": ["Valor mínimo ou máximo?", "Limite de preço?", "Preço da consultoria"]
+  }
+]

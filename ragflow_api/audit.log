@@ -1,0 +1,23 @@
+2025-10-02 13:53:02,759 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 13:53:02,760 INFO Calling chat model payload_len=14
+2025-10-02 13:53:02,762 ERROR Error calling https://ollama-chat:11434/api/generate: Could not find a suitable TLS CA certificate bundle, invalid path: /certs/ca.crt
+2025-10-02 14:26:56,942 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 14:26:56,942 INFO Calling chat model payload_len=14
+2025-10-02 14:26:59,692 ERROR Error calling http://ollama-chat:11434/api/generate: HTTPConnectionPool(host='ollama-chat', port=11434): Max retries exceeded with url: /api/generate (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000026801CDDA90>: Failed to resolve 'ollama-chat' ([Errno 11001] getaddrinfo failed)"))
+2025-10-02 14:28:16,056 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 14:28:16,057 INFO Calling chat model payload_len=14
+2025-10-02 14:28:25,228 ERROR Error calling http://localhost:11434/api/generate: Extra data: line 2 column 1 (char 99)
+2025-10-02 14:29:39,800 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 14:29:39,800 INFO Calling chat model payload_len=14
+2025-10-02 14:29:49,799 ERROR Error calling http://localhost:11434/api/generate: Extra data: line 2 column 1 (char 102)
+2025-10-02 14:32:01,896 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 14:32:01,896 INFO Calling chat model payload_len=14
+2025-10-02 14:32:04,730 INFO Calling embed model text_len=0
+2025-10-02 14:32:04,736 ERROR Error calling http://localhost:11434/api/generate: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-10-02 14:40:53,053 INFO REQUEST_START client=127.0.0.1 question_len=14
+2025-10-02 14:43:50,125 INFO AUDIT client=127.0.0.1 question=faixa de preço answer_len=0
+2025-10-02 15:07:42,535 INFO Pergunta recebida: faixa de preço
+2025-10-02 16:14:20,562 INFO Pergunta recebida: faixa de preço
+2025-10-02 16:19:27,811 INFO Resposta enviada: 
+2025-10-02 16:27:38,770 INFO Pergunta recebida: faixa de preço
+2025-10-02 16:37:50,054 INFO Resposta enviada: 

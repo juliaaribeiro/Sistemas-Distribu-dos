@@ -33,6 +33,11 @@ A solução consiste em um sistema distribuído composto pelos seguintes element
 ## 1.3. Fluxo de Dados Inicial (DFD - Data Flow Diagram)
 O fluxo de dados a seguir descreve como a informação se move através do sistema sem a implementação de controles de segurança avançados.
 
+<p align="center">
+  <img src="Usuario.png" alt="Usuário" width="400"/>
+</p>
+
+
 **DFD do Sistema**
 
 1. **Usuário → Frontend**: O cliente digita uma pergunta na interface do chat.  

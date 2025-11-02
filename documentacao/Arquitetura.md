@@ -34,7 +34,7 @@ A solução consiste em um sistema distribuído composto pelos seguintes element
 O fluxo de dados a seguir descreve como a informação se move através do sistema sem a implementação de controles de segurança avançados.
 
 <p align="center">
-  <img src="Usuario.png" alt="Usuário" width="800"/>
+  <img src="Usuario.png" alt="Usuário" width="1100"/>
 </p>
 
 

@@ -144,6 +144,7 @@ CHAT_ID = "ID"      # id do assistente configurado
 
 #5. Executando o servidor
 
+cd ragflow_api
 uvicorn backend:app --reload
 
 Abra index.html no navegador para interagir com o chatbot.

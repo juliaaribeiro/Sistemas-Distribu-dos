@@ -3,13 +3,13 @@
 Trabalho Prático – Disciplina de Sistemas Distribuídos
 Universidade Federal de Lavras (UFLA)
 
-## Descrição do Projeto
+## DESCRIÇÃO DO PROJETO
 
 O ConsultAI Ufla Júnior é uma aplicação inteligente desenvolvida para atender potenciais clientes da Ufla Júnior, empresa júnior de consultoria em administração.
 
 O sistema tem como objetivo responder automaticamente dúvidas frequentes sobre os serviços de consultoria, utilizando uma base de dados própria e explorando conceitos de sistemas distribuídos e inteligência artificial.
 
-## Objetivos
+## OBJETIVOS
 
 - Criar um chatbot inteligente para interação com clientes da Ufla Júnior.
 

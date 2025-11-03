@@ -29,11 +29,6 @@ Portanto, a dor central que o projeto pretende resolver é: melhorar a experiên
 
 - Fornecer respostas contextualizadas e consistentes com base em nossa base de conhecimento.
 
-- Redução da sobrecarga de atendentes humanos em perguntas frequentes.
-
-- Disponibilidade de atendimento 24/7 para potenciais clientes.
-
-- Maior agilidade no processo de captação de novos clientes.
 
 ## ESTRUTURA DO PROJETO
 

@@ -30,7 +30,7 @@ O projeto terá a seguinte estrutura:
 
 Toda a análise empresarial, arquitetônica, modelagem de ameaças e estratégias de mitigação do sistema estão detalhadas nos seguintes documentos:
 
-1.  **[Introdução](./documentacao/Introducao.md)**: Detalha o problema enfrentado pela UFLA JR e faz proposta de solução
+1.  **[Introdução](./documentacao/Introducao.md)**: Detalha o problema enfrentado pela UFLA JR e faz proposta de solução.
 2.  **[Visão Arquitetônica Inicial](./documentacao/Arquitetura.md)**: Descreve a arquitetura funcional do sistema antes da análise de segurança.
 3.  **[Modelagem de Ameaças](./documentacao/2_ModelagemAmeacas.md)**: Apresenta a análise de riscos e ameaças utilizando a metodologia STRIDE.
 4.  **[Visão Arquitetônica Final](./documentacao/VisaoArquitetonicaFinal.md)**: Detalha a arquitetura aprimorada com os controles de segurança implementados

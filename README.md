@@ -133,7 +133,7 @@ Para o funcionamento do **ConsultAI Ufla Júnior**, foram integradas as seguinte
 
 <p align="center"> <img src="IAs.png" alt="IAs utilizadas no ConsultAI Ufla Júnior" width="1100"/> </p>
 
-## RODADNDO O PROJETO:
+## RODANDO O PROJETO:
 
 ```bash
 ### 1. Clone o repositório

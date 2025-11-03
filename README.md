@@ -23,7 +23,7 @@ O sistema tem como objetivo responder automaticamente dúvidas frequentes sobre 
 O projeto terá a seguinte estrutura:
 
 - Toda parte do frontend e backend da aplicação estará organizado na pasta [`ragflow_api`](./ragflow_api/)
-- Toda documentação Arquitetônica estaŕa na pasta [`documentacao`](./documentacao/)
+- Toda documentação estaŕa na pasta [`documentacao`](./documentacao/)
 - A base de dados que projeto irá usar estará na pasta [`base_de_dados`](./base_de_dados/)
 
 ## DOCUMENTAÇÃO

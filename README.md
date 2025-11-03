@@ -56,9 +56,8 @@ Toda a análise arquitetônica, modelagem de ameaças e estratégias de mitigaç
     <td style="padding: 8px; text-align: center;">
       <img alt="HTML" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
       <img alt="CSS" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
-      <img alt="JavaScript" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" />
     </td>
-    <td style="padding: 8px;">HTML5, CSS3 & JavaScript</td>
+    <td style="padding: 8px;">HTML5 & CSS3</td>
     <td style="padding: 8px;">Front-End</td>
   </tr>
 

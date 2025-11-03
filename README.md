@@ -122,13 +122,14 @@ Toda a análise arquitetônica, modelagem de ameaças e estratégias de mitigaç
   </tr>
 </table>
 
-IAs Utilizadas no Desenvolvimento do Trabalho
+## IAs Utilizadas no Desenvolvimento do Trabalho
 
-Para o funcionamento do ConsultAI Ufla Júnior, foram integradas as seguintes IAs, cada uma com papéis específicos dentro do sistema:
+Para o funcionamento do **ConsultAI Ufla Júnior**, foram integradas as seguintes **IAs**, cada uma com **papéis específicos** dentro do sistema:
 
-nomic-embed-text (conteinerizada): responsável por gerar embeddings da base de dados, permitindo que o RAGFlow realize buscas semânticas eficientes e forneça respostas precisas a partir do conhecimento armazenado.
+- **nomic-embed-text (conteinerizada):** responsável por gerar **embeddings da base de dados**, permitindo que o **RAGFlow** realize **buscas semânticas eficientes** e forneça **respostas precisas** a partir do **conhecimento armazenado**.
 
-qwen2.5:0.5B (conteinerizado): utilizado para complementar informações não presentes na base de dados, garantindo respostas mais completas e contextualmente relevantes aos usuários.
+- **qwen2.5:0.5B (conteinerizado):** utilizado para **complementar informações não presentes na base de dados**, garantindo **respostas mais completas** e **contextualmente relevantes** aos usuários.
+
 
 <p align="center"> <img src="IAs.png" alt="IAs utilizadas no ConsultAI Ufla Júnior" width="1100"/> </p>
 

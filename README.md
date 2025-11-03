@@ -26,7 +26,7 @@ O projeto terá a seguinte estrutura:
 - Toda documentação Arquitetônica estaŕa na pasta [`documentacao`](./documentacao/)
 - A base de dados que projeto irá usar estará na pasta [`base_de_dados`](./base_de_dados/)
 
-## DOCUMENTAÇÃO ARQUITETÔNICA
+## DOCUMENTAÇÃO
 
 Toda a análise empresarial, arquitetônica, modelagem de ameaças e estratégias de mitigação do sistema estão detalhadas nos seguintes documentos:
 

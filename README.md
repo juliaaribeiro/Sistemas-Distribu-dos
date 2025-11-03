@@ -122,7 +122,7 @@ Para o funcionamento do **ConsultAI Ufla Júnior**, foram integradas as seguinte
 ### 1. Clone o repositório
 
 git clone git@github.com:juliaaribeiro/Sistemas-Distribu-dos.git
-cd Sistemas-Distribu-do
+cd Sistemas-Distribu-dos
 
 #2. Crie um ambiente virtual
 

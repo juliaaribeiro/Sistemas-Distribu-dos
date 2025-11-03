@@ -21,7 +21,7 @@ A solução consiste em um sistema distribuído composto pelos seguintes element
 
 | Componente        | Tecnologia/Framework             | Responsabilidade                                                                 |
 |-------------------|----------------------------------|---------------------------------------------------------------------------------|
-| Frontend          | CSS HTML JAVASCRIPT            | Interface do usuário (UI) e interação com o chat                                |
+| Frontend          | CSS HTML                        | Interface do usuário (UI) e interação com o chat                                |
 | Backend           | Python (FastAPI)                | Lógica de negócio, roteamento de requisições e comunicação com os agentes de IA |
 | Agente Local      | Ollama + Docker                 | Processamento de linguagem natural (PLN) com dados da UFLA Júnior               |
 | Agente Externo    | API de terceiros (OpenAI, etc.) | Capacidades estendidas de PLN                                                   |

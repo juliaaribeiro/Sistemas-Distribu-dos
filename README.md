@@ -9,18 +9,6 @@ O ConsultAI Ufla Júnior é uma aplicação inteligente desenvolvida para atende
 
 O sistema tem como objetivo responder automaticamente dúvidas frequentes sobre os serviços de consultoria, utilizando uma base de dados própria e explorando conceitos de sistemas distribuídos e inteligência artificial.
 
-## Relevância do Problema
-
-Atualmente, empresas de consultoria, como a Ufla Júnior, enfrentam um desafio recorrente:
-
-- Clientes potenciais possuem muitas dúvidas iniciais sobre como funcionam os serviços de consultoria, custos, benefícios e processos de contratação.
-
-- A falta de respostas rápidas pode gerar perda de interesse e oportunidades de negócios.
-
-- O atendimento humano, embora essencial, é limitado, dificultando respostas imediatas fora do horário comercial.
-
-Portanto, a dor central que o projeto pretende resolver é: melhorar a experiência inicial do cliente, oferecendo um canal de atendimento inteligente, rápido e acessível, sem sobrecarregar a equipe humana.
-
 ## Objetivos
 
 - Criar um chatbot inteligente para interação com clientes da Ufla Júnior.
@@ -36,15 +24,16 @@ O projeto terá a seguinte estrutura:
 
 - Toda parte do frontend e backend da aplicação estará organizado na pasta [`ragflow_api`](./ragflow_api/)
 - Toda documentação Arquitetônica estaŕa na pasta [`documentacao`](./documentacao/)
-- A base de dados que projeto irá usar estará na pasta [`base de dados`](./base_de_dados/)
+- A base de dados que projeto irá usar estará na pasta [`base_de_dados`](./base_de_dados/)
 
 ## DOCUMENTAÇÃO ARQUITETÔNICA
 
-Toda a análise arquitetônica, modelagem de ameaças e estratégias de mitigação do sistema estão detalhadas nos seguintes documentos:
+Toda a análise empresarial, arquitetônica, modelagem de ameaças e estratégias de mitigação do sistema estão detalhadas nos seguintes documentos:
 
-1.  **[Visão Arquitetônica Inicial](./documentacao/Arquitetura.md)**: Descreve a arquitetura funcional do sistema antes da análise de segurança.
-2.  **[Modelagem de Ameaças](./documentacao/2_ModelagemAmeacas.md)**: Apresenta a análise de riscos e ameaças utilizando a metodologia STRIDE.
-3.  **[Visão Arquitetônica Final e Mitigações](./documentacao/VisaoArquitetonicaFinal.md)**: Detalha a arquitetura aprimorada com os controles de segurança implementados
+1.  **[Introdução](./documentacao/Introducao.md)**: Detalha o problema enfrentado pela UFLA JR e faz proposta de solução
+2.  **[Visão Arquitetônica Inicial](./documentacao/Arquitetura.md)**: Descreve a arquitetura funcional do sistema antes da análise de segurança.
+3.  **[Modelagem de Ameaças](./documentacao/2_ModelagemAmeacas.md)**: Apresenta a análise de riscos e ameaças utilizando a metodologia STRIDE.
+4.  **[Visão Arquitetônica Final](./documentacao/VisaoArquitetonicaFinal.md)**: Detalha a arquitetura aprimorada com os controles de segurança implementados
 
 
 

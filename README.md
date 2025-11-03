@@ -122,7 +122,7 @@ Toda a análise arquitetônica, modelagem de ameaças e estratégias de mitigaç
   </tr>
 </table>
 
-## IAs Utilizadas no Desenvolvimento do Trabalho
+## IAs UTILIZADAS
 
 Para o funcionamento do **ConsultAI Ufla Júnior**, foram integradas as seguintes **IAs**, cada uma com **papéis específicos** dentro do sistema:
 

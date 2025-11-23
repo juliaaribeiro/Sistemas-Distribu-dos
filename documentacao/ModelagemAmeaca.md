@@ -1,63 +1,159 @@
-# 2. Modelagem de Ameaças e Estratégias de Mitigação
+MODELAGEM DE AMEAÇAS – ConsultAI UFLA Júnior
+1. Introdução
 
-## 2.1. Metodologia de Análise
+Este documento apresenta a modelagem de ameaças do sistema ConsultAI UFLA Júnior, chatbot desenvolvido para auxiliar potenciais clientes da UFLA Júnior – Empresa Júnior de Consultoria em Administração – fornecendo respostas rápidas e confiáveis sobre seus serviços, prazos e processos internos.
 
-Para a identificação e categorização de ameaças, este projeto adota o modelo **STRIDE**, uma metodologia que foca em seis categorias de ameaças à segurança.
+A modelagem segue a metodologia STRIDE, amplamente utilizada em sistemas distribuídos, e tem como objetivo:
 
-- **S**poofing (Falsificação de Identidade): Fingir ser algo ou alguém que não é.
-- **T**ampering (Violação de Dados): Modificar dados sem autorização.
-- **R**epudiation (Negação de Ações): Negar ter realizado uma ação.
-- **I**nformation Disclosure (Exposição de Informações): Expor informações a quem não tem permissão.
-- **D**enial of Service (Negação de Serviço): Derrubar ou degradar um serviço para usuários legítimos.
-- **E**levation of Privilege (Elevação de Privilégio): Obter capacidades ou acesso sem a devida autorização.
+Identificar vulnerabilidades presentes no fluxo de dados e nos componentes do sistema.
 
-## 2.2. Superfície de Ataque
+Avaliar probabilidade, impacto e risco das ameaças.
 
-A superfície de ataque do sistema **ConsultAI Ufla Júnior** inclui os seguintes pontos de interação:
+Propor medidas de mitigação.
 
-- A interface web do chatbot (Frontend).
-- A API pública do Backend (FastAPI).
-- O agente de IA local executado via Docker (Ollama).
-- O agente de IA externo acessado via API.
-- A Base de Conhecimento utilizada para compor respostas.
-- A comunicação entre os componentes internos (A2A).
+Calcular risco residual após as medidas implementadas.
 
-## 2.3. Matriz de Análise de Ameaças STRIDE
+Esta análise complementa a visão arquitetônica inicial e auxilia na definição de controles de segurança mais adequados ao ecossistema do projeto.
 
-### Tabela 2: Matriz de Análise de Ameaças STRIDE
+2. Metodologia Utilizada – STRIDE
 
-| Componente | Spoofing | Tampering | Repudiation | Information Disclosure | Denial of Service | Elevation of Privilege |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Frontend (Chat Web)** | Criação de página falsa para capturar interações. | Injeção de scripts maliciosos (XSS). | - | Exposição de respostas com dados sensíveis. | - | - |
-| **Backend API (FastAPI)** | Requisições forjadas (CSRF ou request spoofing). | Manipulação de parâmetros e rotas. | Usuário nega ter enviado requisição por falta de logs. | Acesso indevido a dados ou respostas de outros usuários. | Sobrecarga por requisições automáticas (DDoS). | Obtenção de privilégios administrativos. |
-| **Agente Local (Ollama / Docker)** | - | Alteração não autorizada do modelo ou do prompt. | - | Extração de informações internas via prompt injection. | Sobrecarga com prompts pesados. | Escalada de privilégios no host via container. |
-| **Agente Externo (LLM via API)** | Uso indevido de credenciais de API. | Manipulação de respostas por ataque intermediário. | - | Vazamento de informações sensíveis enviadas ao provedor. | Indisponibilidade causada por abuso. | - |
-| **Base de Conhecimento (JSON / Arquivos)** | - | Alteração não autorizada das informações exibidas aos usuários. | - | Exposição de informações internas ou dados incorretos. | - | - |
-| **Comunicação (Backend ↔ IA / A2A)** | Serviço malicioso se passando por agente legítimo. | Alteração de respostas em trânsito (Man-in-the-Middle). | - | Vazamento por tráfego não criptografado. | Interrupção da comunicação entre serviços. | - |
+A metodologia STRIDE classifica ameaças em seis categorias:
 
-## 2.4. Matriz de Risco
+Categoria	Significado	Exemplos
+S – Spoofing	Falsificação de identidade	Roubo de sessão, uso indevido de API key
+T – Tampering	Manipulação de dados	Alteração do JSON da base de conhecimento
+R – Repudiation	Negação de ações	Falta de logs ou auditoria
+I – Information Disclosure	Divulgação indevida	Vazamento para API externa
+D – Denial of Service	Negação de Serviço	Travamento do Ollama por carga excessiva
+E – Elevation of Privilege	Elevação de privilégio	Escape do container Docker
 
-### Tabela 3: Matriz de Risco
+A análise é aplicada aos fluxos do DFD (Data Flow Diagram) e aos componentes da arquitetura:
 
-| ID | Componente | Ameaça (STRIDE) | Descrição da Ameaça | Probabilidade (Score) | Impacto (Score) | Pontuação de Risco |
-| :-- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | Backend API | Denial of Service | Ataques de sobrecarga (DDoS) na API. | Alta (15) | Médio (10) | **150** |
-| **02** | Agente Local | Denial of Service | Sobrecarga do modelo com requisições complexas. | Alta (15) | Médio (10) | **150** |
-| **03** | Comunicação (A2A) | Tampering | Interceptação e alteração das respostas. | Média (10) | Alto (15) | **150** |
-| **04** | Backend API | Spoofing | Requisições forjadas (CSRF ou ataques externos). | Alta (15) | Médio (10) | **150** |
-| **05** | Base de Conhecimento | Tampering | Alteração não autorizada do conteúdo exibido aos usuários. | Média (10) | Médio (10) | **100** |
-| **06** | Frontend | Tampering | Injeção de scripts maliciosos (XSS). | Média (10) | Baixo (5) | **50** |
-| **07** | Agente Local | Information Disclosure | Extração de informações sensíveis via prompt injection. | Média (10) | Médio (10) | **100** |
-| **08** | Backend API | Repudiation | Usuário/serviço nega ter enviado requisição. | Alta (15) | Baixo (5) | **75** |
-| **09** | Backend API | Elevation of Privilege | Obter acesso administrativo por falhas na API. | Baixa (5) | Alto (15) | **75** |
-| **10** | Comunicação | Denial of Service | Interrupção da comunicação entre serviços. | Baixa (5) | Médio (10) | **50** |
+Frontend
 
-## 2.5. Sumário dos Riscos Críticos
+Backend (FastAPI)
 
-Com base na análise realizada, os riscos mais críticos para o sistema são:
+Agente Local (Ollama)
 
-1. **Prompt Injection e manipulação de respostas nos agentes de IA.**
-2. **Vazamento de informações durante a comunicação entre os serviços.**
-3. **Negação de serviço (DoS) na API ou nos agentes de IA.**
-4. **Alteração não autorizada da Base de Conhecimento, impactando a confiabilidade das respostas.**
+Agente Externo (API de terceiros)
 
+Base de Conhecimento
+
+Comunicação A2A
+
+3. Fluxo de Dados Considerado (DFD Resumido)
+
+O DFD utilizado como base representa o fluxo de comunicação entre o usuário, o frontend, o backend e os agentes de IA. Ele é essencial para identificar pontos onde podem ocorrer:
+
+Interceptações
+
+Alterações
+
+Abusos de funcionalidade
+
+Vazamentos
+
+Falhas de integridade
+
+O fluxo considerado é:
+
+Usuário → Frontend: Envia pergunta
+
+Frontend → Backend: Envia requisição HTTP
+
+Backend → Agentes de IA (Local/Externo): Processamento
+
+Agentes → Backend: Resposta processada
+
+Backend → Frontend
+
+Frontend → Usuário
+
+A modelagem de ameaças foi construída analisando cada ponto deste fluxo.
+
+4. Processo de Modelagem
+
+O processo seguiu as etapas:
+
+Identificação dos ativos
+
+Informações da UFLA Júnior
+
+Base de Conhecimento
+
+Respostas geradas pelo modelo
+
+Sessões de usuário
+
+API Keys
+
+Logs do sistema
+
+Identificação dos componentes do sistema
+
+Frontend (UI do chat)
+
+Backend
+
+Agente Local (Ollama + Docker)
+
+Agente Externo
+
+Base de Conhecimento
+
+Canal de comunicação A2A
+
+Mapeamento do DFD
+– Identificação dos fluxos de dados, limites de confiança e interações críticas.
+
+Análise STRIDE por componente
+– Ameaças foram identificadas em cada fluxo e parte do sistema.
+
+Cálculo de risco (Prob. × Impacto)
+– Matriz de risco fornecida pelo professor.
+
+Proposição de controles de mitigação
+– Focados na redução de probabilidade e impacto.
+
+Cálculo do risco residual
+– Após medidas aplicadas.
+
+5. Tabela de Ameaças (Completa – STRIDE)
+
+A tabela abaixo contém toda a modelagem solicitada:
+
+| ID | Vulnerabilidade                         | Fluxo DFD                             | Classe STRIDE              | Descrição da Ameaça                                                                 | Prob. | Impacto | Risco | Medida de Mitigação                                                                                 | Prob. Residual | Impacto Residual | Risco Residual |
+|----|------------------------------------------|----------------------------------------|----------------------------|---------------------------------------------------------------------------------------|-------|---------|--------|-------------------------------------------------------------------------------------------------------|----------------|-------------------|-----------------|
+| 1  | Prompt Injection                         | Frontend → Backend → Agentes IA        | Tampering                  | Usuário manipula prompt para quebrar regras ou revelar informações internas.         | 15    | 15      | 225    | Sanitização; filtros; prompts seguros; pós-validação.                                                 | 5              | 10                | 50              |
+| 2  | Vazamento para API externa               | Backend → Agente Externo               | Information Disclosure     | Backend envia informações não-anonimizadas ao provedor de IA.                        | 10    | 15      | 150    | Anonimização; criptografia; envio mínimo de dados; política de não retenção.                          | 5              | 10                | 50              |
+| 3  | XSS (injeção no chat)                    | Frontend                                | Tampering / Info Disclosure| Scripts maliciosos inseridos na UI do chat.                                           | 15    | 10      | 150    | Escapagem de HTML; CSP; sanitização; bibliotecas seguras.                                            | 5              | 5                 | 25              |
+| 4  | Sequestro de Sessão                      | Frontend → Backend                      | Spoofing                   | Atacante usa token/cookie roubado para se passar por outro usuário.                  | 10    | 15      | 150    | Cookies HttpOnly/Secure; expiração curta; MFA para admins.                                           | 5              | 10                | 50              |
+| 5  | DoS no Agente Local (Ollama)             | Frontend → Backend → Agentes IA         | DoS                        | Requisições excessivas travam o container.                                            | 10    | 15      | 150    | Rate limiting; filas; circuit breaker; limitar CPU/RAM via Docker.                                   | 5              | 10                | 50              |
+| 6  | Escape de Container                      | Agentes IA (Docker)                     | Elevation of Privilege     | Vulnerabilidade no container concede acesso ao host.                                 | 10    | 15      | 150    | Seccomp; AppArmor; usuário não-root; atualização de imagens.                                          | 5              | 10                | 50              |
+| 7  | Alteração indevida da Base de Conhecimento| Backend → Base de Conhecimento         | Tampering                  | JSON alterado causa respostas incorretas.                                             | 5     | 15      | 75     | Controle de versão; ACL; assinatura; auditoria.                                                        | 5              | 10                | 50              |
+| 8  | Acesso não autorizado à base             | Backend → Base de Conhecimento          | Info Disclosure            | Acesso não permitido a dados internos.                                                | 10    | 10      | 100    | Criptografia; controle de acesso; logs.                                                               | 5              | 5                 | 25              |
+| 9  | Vazamento de API Key                     | Backend → API Externa                   | Spoofing/Tampering         | Chaves expostas permitem uso indevido ou ataques.                                     | 10    | 10      | 100    | Secrets Manager; rotacionamento; variáveis de ambiente seguras.                                      | 5              | 5                 | 25              |
+| 10 | Ausência de logs (repudiação)            | Backend                                 | Repudiation                | Falta de rastreabilidade das ações.                                                   | 10    | 10      | 100    | Logs imutáveis; timestamps; IDs de requisição; SIEM.                                                  | 5              | 5                 | 25              |
+| 11 | MITM na comunicação A2A                  | Backend ↔ Agentes IA                     | Info Disclosure/Tampering | Interceptação de tráfego entre serviços.                                              | 10    | 15      | 150    | TLS; mTLS; pinning; service mesh.                                                                    | 5              | 10                | 50              |
+| 12 | Respostas incorretas (alucinação)         | Agentes IA → Backend → Frontend         | Tampering/Integrity        | IA fornece conteúdo falso, prejudicando o cliente.                                    | 15    | 10      | 150    | Pós-validação; filtros; checagem factual; fallback seguro.                                            | 5              | 5                 | 25              |
+| 13 | Abuso de recursos por usuário            | Frontend → Backend                      | DoS/Tampering              | Usuário legítimo envia requisições excessivas.                                       | 10    | 10      | 100    | Rate limiting; quotas; bloqueio automático.                                                           | 5              | 5                 | 25              |
+| 14 | Vazamento via logs                       | Backend → Logs                           | Information Disclosure     | Logs armazenam dados sensíveis sem mascaramento.                                     | 10    | 10      | 100    | Mascaramento; redução de logs sensíveis; criptografia; controles de acesso.                          | 5              | 5                 | 25              |
+
+6. Conclusão
+
+A modelagem de ameaças revelou riscos importantes, especialmente relacionados a:
+
+Prompt Injection
+
+Vazamento de dados em APIs externas
+
+XSS no chat
+
+DoS no agente local
+
+MITM na comunicação A2A
+
+Alucinações da IA
+
+As medidas de mitigação propostas reduzem significativamente o risco residual em todos os cenários.
+A análise demonstra que, com os controles aplicados, o sistema torna-se muito mais seguro, mantendo integridade, confidencialidade e disponibilidade adequadas para um ambiente de atendimento automatizado.

@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>ConsultAI Chat</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; }
-        #chat { border: 1px solid #ccc; padding: 10px; height: 400px; overflow-y: scroll; }
-        #userInput { width: 80%; padding: 10px; }
-        #sendBtn { padding: 10px; }
-        .user { color: blue; margin: 5px 0; }
-        .bot { color: green; margin: 5px 0; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ConsultAI</h1>
-    <div id="chat"></div>
-    <input type="text" id="userInput" placeholder="Digite sua pergunta">
-    <button id="sendBtn">Enviar</button>
+    <div class="chat-container">
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>ConsultAI</h1>
+        </header>
+
+        <div id="chat"></div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Digite sua pergunta...">
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
 
     <script>
         const chatDiv = document.getElementById('chat');
@@ -24,9 +26,9 @@
         const btn = document.getElementById('sendBtn');
 
         async function sendMessage() {
-            const question = input.value;
+            const question = input.value.trim();
             if (!question) return;
-            chatDiv.innerHTML += `<div class="user"><b>Você:</b> ${question}</div>`;
+            chatDiv.innerHTML += `<div class="message user"><b>Você:</b> ${question}</div>`;
             input.value = '';
 
             const response = await fetch('http://localhost:8000/ask', {
@@ -34,13 +36,16 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ text: question })
             });
+
             const data = await response.json();
-            chatDiv.innerHTML += `<div class="bot"><b>ConsultAI:</b> ${data.answer}</div>`;
+            chatDiv.innerHTML += `<div class="message bot"><b>ConsultAI:</b> ${data.answer}</div>`;
             chatDiv.scrollTop = chatDiv.scrollHeight;
         }
 
         btn.addEventListener('click', sendMessage);
-        input.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
     </script>
 </body>
 </html>

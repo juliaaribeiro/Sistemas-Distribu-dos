@@ -170,4 +170,4 @@ Gabriela Ribeiro
 
   - [Júlia Ribeiro](https://github.com/juliaaribeiro)
 
-Larissa Rocha
+  - [Larissa Rocha](https://github.com/lari030)

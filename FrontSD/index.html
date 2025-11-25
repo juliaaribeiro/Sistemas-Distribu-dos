@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ConsultAI Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>ConsultAI</h1>
+        </header>
+
+        <div id="chat"></div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Digite sua pergunta...">
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const chatDiv = document.getElementById('chat');
+        const input = document.getElementById('userInput');
+        const btn = document.getElementById('sendBtn');
+
+        async function sendMessage() {
+            const question = input.value.trim();
+            if (!question) return;
+            chatDiv.innerHTML += `<div class="message user"><b>Você:</b> ${question}</div>`;
+            input.value = '';
+
+            const response = await fetch('http://localhost:8000/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: question })
+            });
+
+            const data = await response.json();
+            chatDiv.innerHTML += `<div class="message bot"><b>ConsultAI:</b> ${data.answer}</div>`;
+            chatDiv.scrollTop = chatDiv.scrollHeight;
+        }
+
+        btn.addEventListener('click', sendMessage);
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>

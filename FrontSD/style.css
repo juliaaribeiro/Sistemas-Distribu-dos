@@ -1,0 +1,112 @@
+/* ===== Paleta UFLA Jr. ===== */
+:root {
+    --azul-escuro: #001836;
+    --laranja: #F7931E;
+    --branco: #FFFFFF;
+    --cinza-claro: #F4F4F4;
+}
+
+/* ===== Layout geral ===== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #E8EDF5;
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    background-color: var(--branco);
+    color: #222;
+    width: 600px;       
+    height: 600px;      
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* ===== Área do chat ===== */
+#chat {
+    flex: 1;
+    padding: 15px;
+    background-color: var(--cinza-claro);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ===== Mensagens ===== */
+.message {
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 75%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user {
+    background-color: var(--laranja);
+    color: var(--branco);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.bot {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+/* ===== Input e botão ===== */
+.input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#sendBtn {
+    background-color: var(--laranja);
+    border: none;
+    color: var(--branco);
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#sendBtn:hover {
+    background-color: #d97f0d;
+}

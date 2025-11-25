@@ -135,7 +135,6 @@ source venv/bin/activate  # Linux/macOS
 pip install -r requirements.txt
 
 #4. Ajuste as variáveis de ambiente
-#Remova o .exmaple do .env e altere os valores das variáveis
 
 API_KEY = "ragflow-..."       # sua chave de API da RAGFlow
 BASE_URL = "http://localhost"   # base URL do servidor RAGFlow
